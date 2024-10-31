@@ -1,0 +1,24 @@
+.mat-card {
+    display: flex;
+    flex-direction: row;
+
+    &__details {
+        margin-top: 20px;
+    }
+}
+
+img {
+    width: 150px;
+}
+
+div {
+    font-size: 14px;
+}
+
+.title-button {
+    cursor: pointer;
+}
+
+.title-button:hover {
+    color: rgba(0,0,0,.54);
+}
