@@ -7,7 +7,6 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs';
 import { DataStore } from '../core/store/data.store';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { globalConfig } from '../../config/global-config';
 
 @Component({
   selector: 'app-home',
@@ -47,8 +46,9 @@ export class HomeComponent implements OnInit {
       distinctUntilChanged(),
       takeUntilDestroyed(this.destroyRef)
     )
-    .subscribe(searchTerm => {
-      this.dataStore.updateSearchTerm(searchTerm ?? '');
+    .subscribe({
+      next: (searchTerm) => {this.dataStore.updateSearchTerm(searchTerm ?? '')},
+      error: (error) => { console.error(error) }
     })
   }
 }
