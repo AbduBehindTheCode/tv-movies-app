@@ -1,20 +1,17 @@
 @if (tvShows$ | async; as tvShows) {
-    @for (tvShow of tvShows; track tvShow) {
-        <div class="tv-shows__card">
-            <app-card 
-                [name]="tvShow.name"
-                [originalName]="tvShow.original_name"
-                [posterPath]="IMG_URL + '/' + tvShow.poster_path"
-                [overview]="tvShow.overview"
-                [voteCount]="tvShow.vote_count"
-                [voteAverage]="tvShow.vote_average"
-                [additionalInfo]="{fields: tvShowOverviewFields, data: tvShow}"
-                (cardClicked)="openTvShowDetailsDialog(tvShow.id)"
-            />
-        </div>
-    }
-    
-    @empty {
-        <div>There are no tv shows</div>
-    }
+  @for (tvShow of tvShows; track tvShow) {
+    <div class="tv-shows__card">
+      <app-card
+        [name]="tvShow.name"
+        [originalName]="tvShow.original_name"
+        [posterPath]="tvShow.poster_path ? IMG_URL + '/' + tvShow.poster_path : '/assets/no_pic_available.png'"
+        [overview]="tvShow.overview"
+        [voteCount]="tvShow.vote_count"
+        [voteAverage]="tvShow.vote_average"
+        [additionalInfo]="{ fields: tvShowOverviewFields, data: tvShow }"
+        (cardClicked)="openTvShowDetailsDialog(tvShow.id)" />
+    </div>
+  } @empty {
+    <div>There are no tv shows</div>
+  }
 }

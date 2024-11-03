@@ -1,11 +1,11 @@
 .search {
-    &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &__form-field {
-        width: 60%
-    }
+  &__form-field {
+    width: 60%;
+  }
 }

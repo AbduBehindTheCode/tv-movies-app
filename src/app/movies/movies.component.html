@@ -1,20 +1,17 @@
 @if (movies$ | async; as movies) {
-    @for (movie of movies; track movie) {
-        <div class="movies__card">
-            <app-card 
-                [name]="movie.title"
-                [originalName]="movie.original_title"
-                [posterPath]="IMG_URL + '/' + movie.poster_path"
-                [overview]="movie.overview"
-                [voteCount]="movie.vote_count"
-                [voteAverage]="movie.vote_average"
-                [additionalInfo]="{fields: movieOverviewFields, data: movie}"
-                (cardClicked)="openMovieDetailsDialog(movie.id)"
-            />
-        </div>
-    }
-    
-    @empty {
-        <div>There are no movies</div>
-    }
+  @for (movie of movies; track movie) {
+    <div class="movies__card">
+      <app-card
+        [name]="movie.title"
+        [originalName]="movie.original_title"
+        [posterPath]="IMG_URL + '/' + movie.poster_path"
+        [overview]="movie.overview"
+        [voteCount]="movie.vote_count"
+        [voteAverage]="movie.vote_average"
+        [additionalInfo]="{ fields: movieOverviewFields, data: movie }"
+        (cardClicked)="openMovieDetailsDialog(movie.id)" />
+    </div>
+  } @empty {
+    <div>There are no movies</div>
+  }
 }

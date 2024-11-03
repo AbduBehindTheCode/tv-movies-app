@@ -18,7 +18,7 @@ export class CardComponent {
   @Input({ required: true }) overview: string;
   @Input({ required: true }) voteCount: number;
   @Input({ required: true }) voteAverage: number;
-  @Input() additionalInfo: { fields: any, data: any }
+  @Input() additionalInfo: { fields: any; data: any };
 
   @Output() cardClicked = new EventEmitter<void>();
 

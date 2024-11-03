@@ -1,19 +1,19 @@
-<mat-card appearance="outlined" class="mat-card">
-    <img mat-card-image [src]="posterPath" alt="Poster unavailable" />
-    <div>
-        <mat-card-header>
-            <mat-card-title (click)="onCardClick()" class="title-button"> {{ name }} </mat-card-title>
-            <mat-card-subtitle> {{ originalName }}</mat-card-subtitle>
-        </mat-card-header>
-        
-        <mat-card-content>
-            <div>{{ overview }}</div>
-            <div class="mat-card__details">
-                @for (field of additionalInfo.fields; track field) {
-                    <div> {{ field.name }}: {{ additionalInfo.data[field.key] }} </div> 
-                }
-                <div> {{ voteAverage }} ({{ voteCount }}) </div>
-            </div>
-        </mat-card-content>
-    </div>
+<mat-card (click)="onCardClick()" appearance="outlined" class="mat-card">
+  <img mat-card-image [src]="posterPath" alt="Poster unavailable" />
+  <div>
+    <mat-card-header>
+      <mat-card-title class="title-button"> {{ name }} </mat-card-title>
+      <mat-card-subtitle> {{ originalName }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div>{{ overview }}</div>
+      <div class="mat-card__details">
+        @for (field of additionalInfo.fields; track field) {
+          <div>{{ field.name }}: {{ additionalInfo.data[field.key] }}</div>
+        }
+        <div>{{ voteAverage }} ({{ voteCount }})</div>
+      </div>
+    </mat-card-content>
+  </div>
 </mat-card>

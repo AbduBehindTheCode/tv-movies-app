@@ -1,24 +1,22 @@
 .mat-card {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
 
-    &__details {
-        margin-top: 20px;
-    }
+  &__details {
+    margin-top: 20px;
+  }
 }
 
 img {
-    width: 150px;
+  width: 150px;
+  max-height: 250px;
 }
 
 div {
-    font-size: 14px;
-}
-
-.title-button {
-    cursor: pointer;
+  font-size: 14px;
 }
 
 .title-button:hover {
-    color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, 0.54);
 }
