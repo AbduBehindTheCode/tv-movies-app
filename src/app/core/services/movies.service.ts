@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Movie, MovieDetails } from '../models/movie.model';
 import { map, Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
+import { CacheService } from './cache.service';
 
 @Injectable({
   providedIn: 'root',
@@ -13,20 +14,26 @@ export class MoviesService {
   details = 'movie';
 
   private http = inject(HttpClient);
+  private cacheService = inject(CacheService);
 
   getTop10Movies(): Observable<Movie[]> {
-    return this.http
-      .get<Movie[]>(`${environment.apiUrl}/${this.topRated}`)
+    const url = environment.apiUrl + '/' + this.topRated;
+    return this.cacheService
+      .cacheObservable<Movie[]>(url, this.http.get<Movie[]>(url))
       .pipe(map((data: any) => data.results.slice(0, 10)));
   }
 
   getMovieDetailsById(id: number): Observable<MovieDetails> {
-    return this.http.get<MovieDetails>(`${environment.apiUrl}/${this.details}/${id}`);
+    const url = environment.apiUrl + '/' + this.details + '/' + id;
+    return this.cacheService.cacheObservable<MovieDetails>(url, this.http.get<MovieDetails>(url));
   }
 
   searchMovie(searchTerm: string): Observable<Movie[]> {
-    return this.http
-      .get<Movie[]>(`${environment.apiUrl}/${this.search}`, { params: { query: searchTerm } })
+    const url = environment.apiUrl + '/' + this.search;
+    const cacheKey = url + '_' + searchTerm;
+
+    return this.cacheService
+      .cacheObservable<Movie[]>(cacheKey, this.http.get<Movie[]>(url, { params: { query: searchTerm } }))
       .pipe(map((data: any) => data.results));
   }
 }
