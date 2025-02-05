@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b1e4df0-55ab-48d8-bffa-0b63701a196b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/interceptors/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/interceptors/auth.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/interceptors/http-error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/interceptors/http-error.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/models/movie.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/models/movie.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/models/tv-show.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/models/tv-show.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/cache.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/cache.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/movies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/movies.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/tv-shows.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/services/tv-shows.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/store/data.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/core/store/data.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies-fields.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/movies/movies-fields.const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/movies/movies.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/movies/movies.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/movies/movies.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/movies/movies.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/card/card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/card/card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/card/card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/card/card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/card/card.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/card/card.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/card/card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/card/card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/dialog/dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/dialog/dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/dialog/dialog.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/dialog/dialog.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/dialog/dialog.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/dialog/dialog.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/components/dialog/dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/components/dialog/dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tv-shows/tv-shows-fields.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tv-shows/tv-shows-fields.const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tv-shows/tv-shows.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tv-shows/tv-shows.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tv-shows/tv-shows.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tv-shows/tv-shows.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tv-shows/tv-shows.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tv-shows/tv-shows.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tv-shows/tv-shows.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tv-shows/tv-shows.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/no_pic_available.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/no_pic_available.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/config.global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.local.template" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/config.local.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.development.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.development.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.spec.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2oqrpEPnIDxEmmHcRjpwiiq3B5U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "integrate-movies-recommendations-ML-model",
+    "last_opened_file_path": "/home/abdou/Desktop/repos/tv-movies-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/abdou/Desktop/repos/tv-movies-app/frontend/node_modules/prettier",
+    "ts.external.directory.path": "/home/abdou/Desktop/repos/tv-movies-app/frontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/movie-recommender-api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b1e4df0-55ab-48d8-bffa-0b63701a196b" name="Changes" comment="" />
+      <created>1731608128532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731608128532</updated>
+      <workItem from="1731608130402" duration="104000" />
+      <workItem from="1731608400787" duration="284000" />
+      <workItem from="1732315083817" duration="973000" />
+      <workItem from="1732388512421" duration="1272000" />
+      <workItem from="1738012137937" duration="601000" />
+      <workItem from="1738521922353" duration="51000" />
+      <workItem from="1738776472065" duration="2611000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
