@@ -1,8 +1,12 @@
 .idea/
+../.idea
 
 # env
 .env
-movie_venv
+venv
+
+# cache
+src/__pycache__
 
 # data
 data/tmdb_5000_credits.csv
