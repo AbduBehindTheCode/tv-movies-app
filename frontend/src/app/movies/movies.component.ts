@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject, OnInit } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import { MoviesService } from '../core/services/movies.service';
 import { environment } from '../../environments/environment';
 import { CardComponent } from '../shared/components/card/card.component';
@@ -21,14 +21,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
 })
-export class MoviesComponent implements OnInit {
+export class MoviesComponent {
   readonly LAST_SELECTED_MOVIE_LS_KEY = 'last_selected_movie';
   readonly RECOMMENDED_MOVIES_LS_KEY = 'recommended_movies';
   readonly IMG_URL = environment.apiImageUrl;
   readonly movieOverviewFields = movieOverviewFields;
   readonly recommenderEnabled = configGlobal.recommenderEnabled;
 
-  showRecommender = this.recommenderEnabled;
+  showRecommender = false;
   recommendedMovies: RecommendedMovie[] = [];
 
   private moviesService = inject(MoviesService);
@@ -60,10 +60,6 @@ export class MoviesComponent implements OnInit {
       return this.movies$;
     })
   );
-
-  ngOnInit() {
-    this.showRecommender = !!localStorage.getItem(this.LAST_SELECTED_MOVIE_LS_KEY);
-  }
 
   getRecommendedMovies(): void {
     const lastSelectedMovie = localStorage.getItem(this.LAST_SELECTED_MOVIE_LS_KEY);
