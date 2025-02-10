@@ -19,3 +19,9 @@ export interface MovieDetails extends Movie {
   status: string;
   tagline: string;
 }
+
+export interface RecommendedMovie {
+  title: string;
+  movie_id: number;
+  poster_url: string;
+}

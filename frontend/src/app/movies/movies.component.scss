@@ -2,4 +2,20 @@
   &__card {
     margin-top: 10px;
   }
+
+  &__title-label {
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px
+  }
+
+  &__carousel-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+  }
 }

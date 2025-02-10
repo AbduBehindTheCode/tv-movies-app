@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { MoviesService } from '../core/services/movies.service';
 import { environment } from '../../environments/environment';
 import { CardComponent } from '../shared/components/card/card.component';
@@ -7,21 +7,29 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../shared/components/dialog/dialog.component';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DataStore } from '../core/store/data.store';
-import { catchError, Observable, switchMap } from 'rxjs';
-import { Movie } from '../core/models/movie.model';
+import { catchError, map, Observable, of, switchMap } from 'rxjs';
+import { Movie, RecommendedMovie } from '../core/models/movie.model';
 import { movieDetailsFields, movieOverviewFields } from './movies-fields.const';
 import { configGlobal } from '../../config/config.global';
+import { CarouselComponent } from '../shared/components/carousel/carousel.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponent, CarouselComponent, MatProgressSpinnerModule],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
 })
-export class MoviesComponent {
+export class MoviesComponent implements OnInit {
+  readonly LAST_SELECTED_MOVIE_LS_KEY = 'last_selected_movie';
+  readonly RECOMMENDED_MOVIES_LS_KEY = 'recommended_movies';
   readonly IMG_URL = environment.apiImageUrl;
   readonly movieOverviewFields = movieOverviewFields;
+  readonly recommenderEnabled = configGlobal.recommenderEnabled;
+
+  showRecommender = this.recommenderEnabled;
+  recommendedMovies: RecommendedMovie[] = [];
 
   private moviesService = inject(MoviesService);
   private dialog = inject(MatDialog);
@@ -31,16 +39,63 @@ export class MoviesComponent {
   movies$: Observable<Movie[]> = this.dataStore.searchTerm$.pipe(
     catchError(error => {
       console.log('error on searchTerm stream! ', error);
-      return '';
+      return of('');
     }),
     switchMap(value => {
-      if (!value) return this.moviesService.getTop10Movies();
+      if (!value) {
+        const lastSelectedMovie = localStorage.getItem(this.LAST_SELECTED_MOVIE_LS_KEY);
+        if (this.recommenderEnabled && lastSelectedMovie) {
+          this.showRecommender = true;
+          this.getRecommendedMovies();
+        }
 
-      if (value && value.length >= configGlobal.searchMinChars) return this.moviesService.searchMovie(value);
+        return this.moviesService.getTop10Movies();
+      }
+
+      if (value && value.length >= configGlobal.searchMinChars) {
+        this.showRecommender = false;
+        return this.moviesService.searchMovie(value);
+      }
 
       return this.movies$;
     })
   );
+
+  ngOnInit() {
+    this.showRecommender = !!localStorage.getItem(this.LAST_SELECTED_MOVIE_LS_KEY);
+  }
+
+  getRecommendedMovies(): void {
+    const lastSelectedMovie = localStorage.getItem(this.LAST_SELECTED_MOVIE_LS_KEY);
+    if (lastSelectedMovie) {
+      this.moviesService
+        .getMoviesRecommendations(lastSelectedMovie)
+        .pipe(
+          map((moviesResponse: { error: string } | RecommendedMovie[]) => {
+            if ('error' in moviesResponse) {
+              const previousRecommendedMovies = localStorage.getItem(this.RECOMMENDED_MOVIES_LS_KEY);
+              return previousRecommendedMovies ? JSON.parse(previousRecommendedMovies ?? '') : [];
+            }
+            localStorage.setItem(this.RECOMMENDED_MOVIES_LS_KEY, JSON.stringify(moviesResponse));
+
+            return moviesResponse;
+          }),
+          takeUntilDestroyed(this.destroyRef$),
+          catchError(error => {
+            console.error('Error on fetching recommendation: ', error);
+            return of([]);
+          })
+        )
+        .subscribe({
+          next: recommendedMovies => {
+            this.recommendedMovies = recommendedMovies;
+          },
+          error: error => {
+            console.error(error);
+          },
+        });
+    }
+  }
 
   openMovieDetailsDialog(id: number): void {
     this.moviesService
@@ -48,6 +103,7 @@ export class MoviesComponent {
       .pipe(takeUntilDestroyed(this.destroyRef$))
       .subscribe({
         next: movieDetailsData => {
+          localStorage.setItem(this.LAST_SELECTED_MOVIE_LS_KEY, movieDetailsData.title);
           this.dialog.open(DialogComponent, {
             data: {
               name: movieDetailsData.title,

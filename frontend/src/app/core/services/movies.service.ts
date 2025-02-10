@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Movie, MovieDetails } from '../models/movie.model';
+import { Movie, MovieDetails, RecommendedMovie } from '../models/movie.model';
 import { map, Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { CacheService } from './cache.service';
@@ -12,6 +12,7 @@ export class MoviesService {
   search = 'search/movie';
   topRated = 'movie/top_rated';
   details = 'movie';
+  recommender = 'movie/recommend';
 
   private http = inject(HttpClient);
   private cacheService = inject(CacheService);
@@ -35,5 +36,15 @@ export class MoviesService {
     return this.cacheService
       .cacheObservable<Movie[]>(cacheKey, this.http.get<Movie[]>(url, { params: { query: searchTerm } }))
       .pipe(map((data: any) => data.results));
+  }
+
+  getMoviesRecommendations(movieTitle: string): Observable<RecommendedMovie[]> {
+    const url = environment.recommenderApiUrl + '/' + this.recommender;
+    return this.cacheService.cacheObservable<RecommendedMovie[]>(
+      url + '_' + movieTitle,
+      this.http.post<RecommendedMovie[]>(url, {
+        movie: movieTitle,
+      })
+    );
   }
 }

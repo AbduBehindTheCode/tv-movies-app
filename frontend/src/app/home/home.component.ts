@@ -4,9 +4,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { debounceTime, distinctUntilChanged, filter } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { DataStore } from '../core/store/data.store';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatIconModule } from '@angular/material/icon';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +21,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     RouterLinkActive,
     RouterModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatIconButton,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -27,12 +31,12 @@ export class HomeComponent implements OnInit {
   search = new FormControl('');
   tabs = [
     {
-      label: 'Tv-Shows',
-      link: 'tv-shows',
-    },
-    {
       label: 'Movies',
       link: 'movies',
+    },
+    {
+      label: 'Tv-Shows',
+      link: 'tv-shows',
     },
   ];
 

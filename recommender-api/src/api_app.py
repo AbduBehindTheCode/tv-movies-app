@@ -1,6 +1,7 @@
 import pickle
 import requests
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware  # Import CORS middleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
@@ -14,6 +15,14 @@ load_dotenv()
 api_key = os.getenv("API_KEY")
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200"],
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 
 class MovieRequest(BaseModel):
     movie: str
@@ -47,7 +56,7 @@ def recommend(movie):
 
     return recommendations
 
-@app.post("/recommend")
+@app.post("/movie/recommend")
 def get_recommendations(request: MovieRequest):
     """API Endpoint: Accepts a movie title and returns recommendations."""
     return recommend(request.movie)

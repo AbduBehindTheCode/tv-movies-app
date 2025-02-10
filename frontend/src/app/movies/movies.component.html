@@ -1,3 +1,14 @@
+@if (showRecommender) {
+  <div class="movies__carousel-panel">
+    @if (recommendedMovies.length) {
+      <span class="movies__title-label">Recommended for you:</span>
+      <app-carousel [carouselItems]="recommendedMovies" (cardClicked)="openMovieDetailsDialog($event)" />
+    } @else {
+      <mat-spinner></mat-spinner>
+    }
+  </div>
+}
+
 @if (movies$ | async; as movies) {
   @for (movie of movies; track movie) {
     <div class="movies__card">
