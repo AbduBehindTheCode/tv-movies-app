@@ -1,0 +1,17 @@
+.idea/
+../.idea/
+
+# env
+.env
+venv/
+
+# cache
+src/__pycache__/
+
+# data
+data/tmdb_5000_credits.csv
+data/tmdb_5000_movies.csv
+
+# model
+model/similarity.pkl
+model/movie_list.pkl

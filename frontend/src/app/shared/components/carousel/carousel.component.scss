@@ -1,0 +1,64 @@
+/* Default: Center carousel, take 80% width */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  transition: width 0.3s ease-in-out;
+}
+
+/* If screen is small and arrows are needed, take full width */
+.full-width {
+  width: 100%;
+}
+
+/* Scrollable container */
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Material card styling */
+.card {
+  min-width: 200px;
+  max-width: 250px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Navigation buttons */
+.nav {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav mat-icon {
+  font-size: 32px;
+  color: black;
+}
+
+/* Positioning arrows inside the carousel */
+.left {
+  left: 5px;
+}
+
+.right {
+  right: 5px;
+}

@@ -1,0 +1,24 @@
+<div class="carousel-container" [ngClass]="{ 'full-width': showArrows && isSmallScreen }">
+  @if (showArrows) {
+    <!-- Left Arrow -->
+    <button class="nav left" (click)="scrollLeft()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  }
+
+  <!-- Scrollable Card List -->
+  <div #carousel class="carousel">
+    @for (item of carouselItems; track item.movie_id) {
+      <mat-card (click)="onCardClick(item.movie_id)" class="card">
+        <img mat-card-image [src]="item.poster_url" alt="Poster unavailable" />
+      </mat-card>
+    }
+  </div>
+
+  <!-- Right Arrow -->
+  @if (showArrows) {
+    <button class="nav right" (click)="scrollRight()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  }
+</div>
