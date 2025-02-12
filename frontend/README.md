@@ -1,18 +1,4 @@
-# Movie & TV App
-
-## Description
-
-This application allows users to explore the top 10 rated TV shows and movies. With a simple, user-friendly interface, users can easily browse detailed information on each item and use a powerful search feature to find specific information.
-
-## Features
-
-- **Top 10 TV shows & Movies**: Quickly access lists of the top 10 rated TV shows and top 10 rated movies.
-- **Detailed View:** Select any item from the list to open a detailed view, showcasing more details about the selected tv show or movie.
-- **Search Functionality** Search feature enables users to find specific tv show or movie with a customizable minimum character limit for triggering results.
-- **Configurable Default Tab**: Set the default tab (tv shows or movies) that displays when the application loads, providing a personalized experience.
-
-- **High UX Design**: Designed with a user-first approach, the app features a clean, modern interface that ensures smooth navigation and interaction.
-- **Responsive Design**: The application is fully responsive, offering a seamless experience on desktop, tablet, and mobile devices, adapting to any screen size.
+# Movie & TV Shows App (Frontend)
 
 ## Technologies Used
 
@@ -63,3 +49,29 @@ npm install
 ```mark
 ng serve
 ```
+
+### ⚠️  Disabling the Recommendation Feature
+If you prefer not to use the recommendation feature, you can disable it by setting the following configuration:
+
+Steps to disable recommendations:
+
+1. **Open the configuration file**: `src/config/config.global.ts`
+2. **Set enableRecommender to false:**
+```mark
+export const enableRecommender = false;
+```
+
+When disabled, setting up the **recommender-api** project is not required.
+
+This allows you to run the application without the recommendation system.
+
+
+## Feedback & Issue Reporting
+If you encounter any issues during installation, notice missing steps in the setup guide, or find bugs in the application, please report them so we can improve the project.
+
+📌 **Where to report issues**:
+- Open an issue on the project's GitHub repository: [GitHub Issues](https://github.com/AbduBehindTheCode/tv-movies-app/issues)
+
+Your feedback helps make this project better! 🚀
+
+
