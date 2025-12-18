@@ -15,11 +15,10 @@ import { CarouselComponent } from '../shared/components/carousel/carousel.compon
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
-  selector: 'app-movies',
-  standalone: true,
-  imports: [CommonModule, CardComponent, CarouselComponent, MatProgressSpinnerModule],
-  templateUrl: './movies.component.html',
-  styleUrl: './movies.component.scss',
+    selector: 'app-movies',
+    imports: [CommonModule, CardComponent, CarouselComponent, MatProgressSpinnerModule],
+    templateUrl: './movies.component.html',
+    styleUrl: './movies.component.scss'
 })
 export class MoviesComponent {
   readonly LAST_SELECTED_MOVIE_LS_KEY = 'last_selected_movie';

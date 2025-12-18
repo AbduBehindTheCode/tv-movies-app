@@ -4,12 +4,11 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-card',
-  standalone: true,
-  imports: [MatCardModule, MatButtonModule, RouterModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-card',
+    imports: [MatCardModule, MatButtonModule, RouterModule],
+    templateUrl: './card.component.html',
+    styleUrl: './card.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
   @Input({ required: true }) name: string;

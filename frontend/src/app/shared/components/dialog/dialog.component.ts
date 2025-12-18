@@ -9,12 +9,11 @@ import {
 } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialog',
-  standalone: true,
-  imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule],
-  templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-dialog',
+    imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule],
+    templateUrl: './dialog.component.html',
+    styleUrl: './dialog.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DialogComponent {
   constructor(

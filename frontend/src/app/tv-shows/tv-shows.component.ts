@@ -13,11 +13,10 @@ import { tvShowDetailsFields, tvShowOverviewFields } from './tv-shows-fields.con
 import { configGlobal } from '../../config/config.global';
 
 @Component({
-  selector: 'app-tv-shows',
-  standalone: true,
-  imports: [CommonModule, CardComponent],
-  templateUrl: './tv-shows.component.html',
-  styleUrl: './tv-shows.component.scss',
+    selector: 'app-tv-shows',
+    imports: [CommonModule, CardComponent],
+    templateUrl: './tv-shows.component.html',
+    styleUrl: './tv-shows.component.scss'
 })
 export class TvShowsComponent {
   readonly IMG_URL = environment.apiImageUrl;

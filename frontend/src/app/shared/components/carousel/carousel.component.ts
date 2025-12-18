@@ -14,12 +14,11 @@ import { MatIcon } from '@angular/material/icon';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-carousel',
-  standalone: true,
-  imports: [MatIcon, NgClass, MatCard, MatCardImage],
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-carousel',
+    imports: [MatIcon, NgClass, MatCard, MatCardImage],
+    templateUrl: './carousel.component.html',
+    styleUrl: './carousel.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselComponent implements AfterViewInit {
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;

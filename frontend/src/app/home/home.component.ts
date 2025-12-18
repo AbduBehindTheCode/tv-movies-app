@@ -11,21 +11,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTabsModule,
-    RouterLinkActive,
-    RouterModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatIconButton,
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    imports: [
+        RouterOutlet,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTabsModule,
+        RouterLinkActive,
+        RouterModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatIconButton,
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
   search = new FormControl('');
