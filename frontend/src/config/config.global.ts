@@ -3,5 +3,5 @@ export const configGlobal = {
   errorMessageDuration: 10, // seconds
   searchMinChars: 3,
   defaultSelectedTab: 'movies', // tv-shows or movies
-  recommenderEnabled: true,
+  recommenderEnabled: false,
 };
